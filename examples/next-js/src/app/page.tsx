@@ -1,5 +1,22 @@
 import Link from "next/link";
 
+
+
+
+
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'My Page Title',
+}
+ 
+
+
+
+
+
+
+
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
