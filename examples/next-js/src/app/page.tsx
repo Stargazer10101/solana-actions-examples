@@ -1,33 +1,22 @@
 import Link from "next/link";
-
-
-
-
-
-import { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title: 'My Page Title',
-}
- 
-
-
-
-
-
-
+import { Metadata } from 'next';
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  CoinsIcon,
-  FileTextIcon,
-  ImageIcon,
-  ShieldIcon,
-  WalletIcon,
-} from "lucide-react";
+import { CoinsIcon, FileTextIcon, ImageIcon, ShieldIcon, WalletIcon } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: 'My Page Title',
+  openGraph: {
+    title: 'My Page Title',
+    type: 'website',
+    url: 'https://www.example.com/page-url',
+    images: 'https://www.example.com/og-image.jpg',
+    description: 'Description of my page',
+  },
+};
 
 const actionCards: Array<{
   title: string;
@@ -44,8 +33,7 @@ const actionCards: Array<{
   {
     title: "Staking SOL",
     href: "/stake",
-    description:
-      "Help secure the Solana network by staking SOL to a validator.",
+    description: "Help secure the Solana network by staking SOL to a validator.",
     icon: <ShieldIcon className="size-12" />,
   },
   {
@@ -63,8 +51,7 @@ const actionCards: Array<{
   // {
   //   title: "Mint an NFT",
   //   href: "/mint-nft",
-  //   description:
-  //     "Allow anyone to claim a digital collectible from a Collection.",
+  //   description: "Allow anyone to claim a digital collectible from a Collection.",
   //   icon: <ImageIcon className="size-12" />,
   // },
 ];
@@ -72,7 +59,9 @@ const actionCards: Array<{
 export default async function Pages() {
   return (
     <>
-      {/* <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:pt-32">
+      {/* Uncomment and update this section as needed */}
+      {/* 
+      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:pt-32">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Link
             href={siteConfig.links.twitter}
@@ -102,21 +91,16 @@ export default async function Pages() {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section> 
+      */}
 
-      <section
-        id="features"
-        className={
-          "container space-y-12 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
-        }
-      >
+      <section id="features" className="container space-y-12 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             Example Solana Actions
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            This project contains examples code snippets for creating Solana
-            Actions.
+            This project contains example code snippets for creating Solana Actions.
           </p>
         </div>
 
@@ -153,7 +137,9 @@ export default async function Pages() {
         </div>
       </section>
 
-      {/* <section id="open-source" className="container py-8 md:py-12 lg:py-24">
+      {/* Uncomment and update this section as needed */}
+      {/* 
+      <section id="open-source" className="container py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             Proudly Open Source
@@ -172,7 +158,8 @@ export default async function Pages() {
             .{" "}
           </p>
         </div>
-      </section> */}
+      </section>
+      */}
     </>
   );
 }
