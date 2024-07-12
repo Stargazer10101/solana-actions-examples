@@ -1,5 +1,5 @@
 {
-  "name": "@solana/actions",
+  "name": "solana-actions",
   "version": "0.0.1",
   "author": "Solana Maintainers <maintainers@solana.foundation>",
   "repository": "https://github.com/solana-developers/solana-actions",
@@ -23,8 +23,10 @@
     "access": "public"
   },
   "dependencies": {
+    "@changesets/cli": "^2.27.7",
     "@solana/actions": "^1.1.0"
   },
+  
   "contributors": [
     {
       "name": "Jordan",
