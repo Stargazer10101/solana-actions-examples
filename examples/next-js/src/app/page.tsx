@@ -8,12 +8,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CoinsIcon, FileTextIcon, ImageIcon, ShieldIcon, WalletIcon } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'My Page Title',
+  title: 'Actions and Blinks',
   openGraph: {
     title: 'My Page Title',
     type: 'website',
-    url: 'https://www.example.com/page-url',
-    images: 'https://www.example.com/og-image.jpg',
+    url: 'https://solana-actions-examples.vercel.app/transfer-sol',
+    images: 'https://images.stockcake.com/public/4/c/a/4ca75dc2-4510-4bf6-980b-b5c59f62a3b4_large/blockchain-network-concept-stockcake.jpg',
     description: 'Description of my page',
   },
 };
